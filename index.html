@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="pt-BR" xml:lang="pt-BR">
+<html class="no-js" lang="pt-BR" xml:lang="pt-BR" ng-app="todoList">
 	<head>
 		<meta charset="utf-8">
 		<title>Todo list with AngularJS</title>
@@ -10,8 +10,27 @@
 	      var tagHtml = document.getElementsByTagName("html")[0];
 	          tagHtml.className = tagHtml.className.replace('no-js', 'js');
 	    </script>
+      <link rel="stylesheet" type="text/css" href="source/css/style.css">
 	</head>
-	<body>
+	<body ng-controller="IndexController">
+    <div class="todo_list">
+      <h2 class="todo_list-title"><span class="highlight">{{getTotalTodos()}}</span> tasks</h2>
+      <ul class="todo_list-list">
+        <li class="todo_list-item" ng-repeat="todo in allTodos">
+          <input type="checkbox" ng-model="todo.done"/>
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      <form class="form">
+        <input class="form-field" placeholder="insert the task" type="text" ng-model="formTodoText" ng-model-instant />
+        <button class="form-submit" ng-click="addTodo()"><h2>Add</h2></button>
+      </form>
 
+      <button class="button_clear" ng-click="clearCompleted()">Clear completed</button>
+    </div>
+
+    <script src="node_modules/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/js/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="source/js/controllers/index-controller.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
