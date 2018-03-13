@@ -8,20 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/resource-solutions/resource-angularjs-todo-list.git"
+    "url": "git+https://github.com/descco-tools/resource-angularjs-todo-list.git"
   },
   "keywords": [
     "angularjs",
     "resource",
     "filter"
   ],
-  "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (http://hemersonvianna.io)",
+  "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (http://descco.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/resource-solutions/resource-angularjs-todo-list/issues"
+    "url": "https://github.com/descco-tools/resource-angularjs-todo-list/issues"
   },
-  "homepage": "https://github.com/resource-solutions/resource-angularjs-todo-list#readme",
+  "homepage": "https://github.com/descco-tools/resource-angularjs-todo-list#readme",
   "devDependencies": {
-    "angular": "^1.5.0"
+    "angular": "1.5.0"
   }
 }
